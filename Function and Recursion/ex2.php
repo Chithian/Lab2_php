@@ -1,26 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Lab2</title>
-</head>
-<body>
-	<form action="functions.php" method="POST">
-    Enter the radius = <input type="text" name="radius"><br>
-    Enter the height = <input type="text" name="height"><br>
-    <input type="submit" name="submit" value="Calculate"><br>
-</form>
-<?php
-//calculates the volume of a cylinder
-//Volym = π r2 h
-function volumeCylinder($r,$h) 
-{
-    $pi = 3.141592653589;
-    $volume = 2 * pi *radius *(radius + height);
-    //return volume;
-    echo "The volume is", volume;
-}
-?>
+<?php 
+	
+	function area_cylinder($r, $h){
+		$A = (2*pi()*$r*$h) + (2*pi()*pow($r, 2));
+		echo "The area of cylinder A = ".$A;
+	}
+	if (isset($_GET["radius"]) && isset($_GET["height"])) {
+		area_cylinder($_GET["radius"], $_GET["height"]);
+	}
 
-
-</body>
-</html>
+ ?>
